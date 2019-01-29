@@ -1,0 +1,44 @@
+psql -U postgres
+
+CREATE TABLE
+Fav_films (
+	id serial PRIMARY KEY,
+	name VARCHAR (355) NOT NULL,
+	country VARCHAR (355) NOT NULL,
+	Earnings VARCHAR (355),
+	Year_premiered TIMESTAMP
+);
+
+INSERT INTO
+Fav_films 
+VALUES 
+(1, 'Excision', USA', 'Unknown', '2012-11-02'::timestamp);
+(2, 'Defendor', USA', '44462', '2010-13-05'::timestamp);
+(3, 'The Tracey Fragments', 'Canada', '44462', '2008-21-02'::timestamp);
+(4, 'The Neon Demon', 'USA', '1333124', '2016-24-06'::timestamp);
+(5, 'Only God Forgives', 'USA', '9743738', '2013-18-08'::timestamp);
+
+СREATE TABLE
+Persons (
+	id serial PRIMARY KEY,
+	name VARCHAR (355) NOT NULL,
+	last_name VARCHAR (355) NOT NULL,
+);
+
+INSERT INTO
+persons
+VALUES
+(1, 'Annalynne', 'Mccord');
+(2, 'Woody', 'Harelson');
+(3, 'Ellen', 'Page');
+(4, 'Elle', 'Fanning');
+(5, 'Ryan', 'Gosling');
+
+СREATE TABLE
+persons2content (
+	id_person VARCHAR (355) NOT NULL;
+	id_content VARCHAR (355) NOT NULL;
+	person_type VARCHAR (355) NOT NULL;
+	);
+SELECT id FROM persons, WHERE id.persons=id.id_person;
+SELECT id FROM Fav_films WHERE id.Fav_films=id.id_content;
