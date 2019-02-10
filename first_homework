@@ -1,14 +1,12 @@
 su - postgres
 psql -U postgres
-DROP DATABASE IF EXISTS Moovies -- назвал так специально, а не по незнанию
-create database Moovies;
 DROP TABLE IF EXISTS Fav_films;
 CREATE TABLE
 Fav_films (
 	id serial PRIMARY KEY,
 	name VARCHAR (355) NOT NULL,
 	country VARCHAR (355) NOT NULL,
-	Earnings NUMERIC (15,2),
+	Earnings NUMERIC (15,2), -- до 15 знаков, 2 знака после запятой
 	Date_premiered DATE
 );
 
@@ -43,4 +41,4 @@ persons2content (
 	id_person VARCHAR (355),
 	id_content VARCHAR (355),
 	person_type VARCHAR (355)
-	);
+	); -- сколько ни пытался, мне не удалось параллельно запихать в эту таблицу значения
