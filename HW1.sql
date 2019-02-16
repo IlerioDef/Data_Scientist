@@ -34,6 +34,7 @@ VALUES
 (4, 'Elle', 'Fanning'),
 (5, 'Ryan', 'Gosling');
 
+Drop table if exists persons2content;
 CREATE TABLE
 persons2content (
 	id_person VARCHAR (355),
