@@ -34,7 +34,7 @@ VALUES
 (4, 'Elle', 'Fanning'),
 (5, 'Ryan', 'Gosling');
 
-СREATE TABLE
+CREATE TABLE
 persons2content (
 	id_person VARCHAR (355),
 	id_content VARCHAR (355),
