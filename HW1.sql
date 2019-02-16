@@ -1,5 +1,3 @@
-su - postgres
-psql -U postgres
 DROP TABLE IF EXISTS Fav_films;
 CREATE TABLE
 Fav_films (
@@ -41,4 +39,4 @@ persons2content (
 	id_person VARCHAR (355),
 	id_content VARCHAR (355),
 	person_type VARCHAR (355)
-	); -- сколько ни пытался, мне не удалось параллельно запихать в эту таблицу значения
+); -- сколько ни пытался, мне не удалось параллельно запихать в эту таблицу значения
