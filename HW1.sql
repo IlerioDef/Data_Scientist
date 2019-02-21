@@ -37,7 +37,16 @@ VALUES
 Drop table if exists persons2content;
 CREATE TABLE
 persons2content (
-	id_person VARCHAR (355),
-	id_content VARCHAR (355),
+	id_person NUMERIC (20,0),
+	id_content NUMERIC (20,0),
 	person_type VARCHAR (355)
 ); -- сколько ни пытался, мне не удалось параллельно запихать в эту таблицу значения
+
+ Insert into persons2content(id_person) Select id from persons;
+ insert into persons2content(id_content) select id from fav_films;
+ insert into persons2content(person_type) values 
+ ('actress'),
+ ('actor'),
+ ('actress'),
+ ('actress'),
+ ('actor');
